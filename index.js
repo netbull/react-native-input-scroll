@@ -88,16 +88,21 @@ export default class extends PureComponent {
         measureInputWidth: 0,
     };
 
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+
         this._root = null;
         this._curFocus = null;
         this._measureCallback = null;
         this._keyboardShow = false;
         this._inputInfoMap = {};
-        this._topOffset = this.props.topOffset;
+        this._topOffset = props.topOffset;
 
-        this._addListener();
         this._extendScrollViewFunc();
+    }
+
+    componentDidMount() {
+        this._addListener();
     }
 
     componentWillUnmount() {
@@ -258,6 +263,7 @@ export default class extends PureComponent {
     }, 3);
 
     _onRef = root => {
+        console.log('on ref');
         const { useAnimatedScrollView } = this.props;
         if (!root) return;
         this._root = root;
@@ -453,7 +459,7 @@ function focus(targetTag) {
         // 在 react-native v0.57 版本中（也可能更早），UIManager.focus 不再有效
         TextInput.State && TextInput.State.focusTextInput(targetTag);
     } else {
-        const AndroidTextInput = UIManager.getViewManagerConfig 
+        const AndroidTextInput = UIManager.getViewManagerConfig
             && UIManager.getViewManagerConfig('AndroidTextInput')
             || UIManager.AndroidTextInput;
         UIManager.dispatchViewManagerCommand(
