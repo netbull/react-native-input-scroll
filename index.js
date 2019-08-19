@@ -263,7 +263,6 @@ export default class extends PureComponent {
     }, 3);
 
     _onRef = root => {
-        console.log('on ref');
         const { useAnimatedScrollView } = this.props;
         if (!root) return;
         this._root = root;
