@@ -1,5 +1,5 @@
 {
-  "name": "react-native-input-scroll-view",
+  "name": "react-native-input-scroll",
   "version": "1.9.3",
   "description": "Perfect TextInput ScrollView",
   "main": "index.js",
@@ -11,12 +11,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/netbull/react-native-input-scroll-view.git"
+    "url": "git+https://github.com/netbull/react-native-input-scroll.git"
   },
   "bugs": {
-    "url": "https://github.com/netbull/react-native-input-scroll-view/issues"
+    "url": "https://github.com/netbull/react-native-input-scroll/issues"
   },
-  "homepage": "https://github.com/netbull/react-native-input-scroll-view#readme",
+  "homepage": "https://github.com/netbull/react-native-input-scroll#readme",
   "dependencies": {
     "prop-types": "^15.7.2"
   },
